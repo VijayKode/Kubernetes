@@ -13,7 +13,6 @@ public class KubeTestController {
     ResponseEntity<String> greet() {
         log.info("Print Number from 1 to 5000");
         for(int i =0; i < 50000; i++) {
-           log.info("{}",i);
         }
         return ResponseEntity.ok("Hello Guys");
     }
