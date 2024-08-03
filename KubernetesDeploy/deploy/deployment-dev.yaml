@@ -6,15 +6,19 @@ spec:
   selector:
     matchLabels:
       app: kubepractice
-  replicas: 2 # Number of replicas that will be created for this deployment
+  replicas: 1 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
         app: kubepractice
     spec:
+      volumes:
+        - name: task-pv-storage
+          persistentVolumeClaim:
+            claimName: task-pv-claim
       containers:
         - name: kubernetespractice
-          image: kubernetespractice:A3 # Image that will be used to containers in the cluster
+          image: kubernetespractice:A5 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -25,3 +29,6 @@ spec:
             limits:
               memory: "1024Mi"
               cpu: "1"
+          volumeMounts:
+            - mountPath: "/filelocation"
+              name: task-pv-storage
