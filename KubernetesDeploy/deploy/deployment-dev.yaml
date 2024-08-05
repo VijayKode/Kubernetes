@@ -12,6 +12,7 @@ spec:
       labels:
         app: kubepractice
     spec:
+      serviceAccountName: test-service-account
       volumes:
         - name: task-pv-storage
           persistentVolumeClaim:
