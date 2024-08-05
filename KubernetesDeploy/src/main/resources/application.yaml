@@ -1,5 +1,7 @@
 spring:
   application:
     name: KubernetesDeploy
-
-
+#  datasource:
+#    url: ${DB_URL}  # Reference to the environment variable DB_URL
+#    username: ${DB_USERNAME}  # Reference to the environment variable DB_USERNAME
+#    password: ${DB_PASSWORD}  # Reference to the environment variable DB_PASSWORD

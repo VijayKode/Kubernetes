@@ -33,3 +33,19 @@ spec:
           volumeMounts:
             - mountPath: "/filelocation"
               name: task-pv-storage
+#          env:
+#            - name: DB_USERNAME
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: authentication  # Refers to the ConfigMap
+#                  key: username         # Key for the username
+#            - name: DB_PASSWORD
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: authentication
+#                  key: password         # Key for the password
+#            - name: DB_URL
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: authentication
+#                  key: url

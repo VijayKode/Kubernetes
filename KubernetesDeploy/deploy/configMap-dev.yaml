@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: authentication
+  namespace: kubetest
+data:
+  auth:
+    username: "root"
+    password: "root"
+    url: "jdbc:sqlserver://localhost:3306"
